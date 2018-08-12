@@ -1,5 +1,7 @@
 # Simply not delicious
 
+[![GuardRails badge](https://badges.production.guardrails.io/shtakai/fuckeduptasty.svg)](https://www.guardrails.io)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
