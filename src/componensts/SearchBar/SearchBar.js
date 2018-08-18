@@ -49,7 +49,7 @@ class SearchBar extends Component {
 
   handleSearch(event) {
     const { term, location, sortBy } = this.state;
-    this.searchYelp(term, location, sortBy);
+    this.props.searchYelp(term, location, sortBy);
     event.preventDefault();
   }
 
@@ -60,12 +60,8 @@ class SearchBar extends Component {
     });
   }
 
-  searchYelp(term, location, sortBy) {
-    console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
-  }
 
   render() {
-    let searchYelp = this.searchYelp();
 
     return(
       <div className="SearchBar">

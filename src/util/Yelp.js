@@ -3,26 +3,26 @@ const apiKey = ''; // Insert API key here.
   const Yelp = {
     search(term, location, sortBy) {
       return fetch(`http://localhost:4000/api/v1/businesses`, {
-        headers: {
-          Authorization: `Bearer ${apiKey}`
-        }
+        method: 'GET',
       }).then(response => {
-        consoel.log(response.json);
         return response.json();
       }).then(jsonResponse => {
-        if (jsonResponse.businesses) {
-          return jsonResponse.businesses.map(business => ({
-            id: business.id,
-            imageSrc: business.image_url,
-            name: business.name,
-            address: business.location.address1,
-            city: business.location.city,
-            state: business.location.state,
-            zipCode: business.location.zip_code,
-            category: business.categories[0].title,
-            rating: business.rating,
-            reviewCount: business.review_count
-          }));
+        if (jsonResponse) {
+          return jsonResponse.map(business => {
+            console.log(business.image_url)
+            return {
+              id: business.id,
+              imageSrc: business.image_src,
+              name: business.name,
+              address: business.address1,
+              city: business.city,
+              state: business.state,
+              zipCode: business.zip_code,
+              category: business.title,
+              rating: business.rating,
+              reviewCount: business.review_count
+            };
+          });
         }
       });
     }
