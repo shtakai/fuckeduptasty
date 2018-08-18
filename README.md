@@ -1,5 +1,9 @@
 # Simply not delicious
 
+## Please use this api server
+https://github.com/shtakai/fucktasteapi
+with port 4000
+
 [![GuardRails badge](https://badges.production.guardrails.io/shtakai/fuckeduptasty.svg)](https://www.guardrails.io)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
